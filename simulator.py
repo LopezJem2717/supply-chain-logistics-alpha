@@ -5,19 +5,38 @@ to calculate estimated arrival times based on traffic and weather.
 """
 
 
-def round():
-    pass
+def calculate_eta(
+    distance_km,
+    base_speed_kmh,
+    traffic_delay_min,
+    weather_delay_min
+):
+    # Validate input values
+    if base_speed_kmh <= 0:
+        raise ValueError("Base speed must be greater than zero.")
 
+    if distance_km < 0:
+        raise ValueError("Distance cannot be negative.")
 
-def calculate_eta(distance_km, base_speed_kmh, traffic_delay_min, weather_delay_min):
-    # Basic heuristic model for Alpha release
-    distance_km / base_speed_kmh
+    if traffic_delay_min < 0 or weather_delay_min < 0:
+        raise ValueError("Delay values cannot be negative.")
 
-    # Include travel time plus environmental delays, using Python's built-in round()
-    total_eta_minutes = round()
+    # Calculate base travel time in minutes
+    base_travel_minutes = (distance_km / base_speed_kmh) * 60
 
-    # Confidence score calculation based on environmental delays
-    confidence = 0.92 if (traffic_delay_min < 15 and weather_delay_min < 10) else 0.75
+    # Add simulated traffic and weather delays
+    total_eta_minutes = round(
+        base_travel_minutes
+        + traffic_delay_min
+        + weather_delay_min
+    )
+
+    # Simple confidence score for Alpha simulation
+    confidence = (
+        0.92
+        if traffic_delay_min < 15 and weather_delay_min < 10
+        else 0.75
+    )
 
     return {
         "predicted_duration_minutes": total_eta_minutes,
@@ -27,16 +46,9 @@ def calculate_eta(distance_km, base_speed_kmh, traffic_delay_min, weather_delay_
     }
 
 
-def print():
-    pass
-
-
-def print():
-    pass
-
-
 if __name__ == "__main__":
-    # Test case matching seed.sql (15.5 km route, 30 km/h traffic, 12m traffic delay, 8m weather delay)
+    # Test case matching the Alpha seed data
     result = calculate_eta(15.5, 30.0, 12, 8)
-    print()
-    print()
+
+    print("ETA Prediction Result:")
+    print(result)
