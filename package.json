@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/LopezJem2717/supply-chain-logistics-alpha#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1"
   }
 }
