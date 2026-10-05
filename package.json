@@ -1,0 +1,29 @@
+{
+  "name": "supply-chain-logistics-alpha",
+  "version": "1.0.0",
+  "description": "Developed as part of the CMSC 495 Computer Science Capstone project, this platform provides real-time supply chain tracking, predictive ETA analytics using machine learning, and automated route optimization for fleet dispatchers.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LopezJem2717/supply-chain-logistics-alpha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LopezJem2717/supply-chain-logistics-alpha/issues"
+  },
+  "homepage": "https://github.com/LopezJem2717/supply-chain-logistics-alpha#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
