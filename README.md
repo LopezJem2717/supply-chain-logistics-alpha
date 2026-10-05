@@ -6,7 +6,6 @@ Developed as part of the CMSC 495 Computer Science Capstone project, this platfo
 ## Team Roles
 * **Lead Architect (Tawhid Talal):** System components, UML structural models, and component boundaries.
 * **Interface Designer (Jemma Lopez):** API specifications, REST contracts, and data validation rules.
-* **Integration Lead (Alan East):** AI model pipelines, Redis queue routing, and feedback loops.
 
 ## System Architecture
 * **Presentation Layer:** Dispatcher Web Dashboard & Driver Mobile Interface.
